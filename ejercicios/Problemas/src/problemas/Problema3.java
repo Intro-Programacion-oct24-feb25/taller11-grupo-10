@@ -18,11 +18,15 @@ public class Problema3 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        
         double nota1;
         double nota2;
         double nota3;
         double nota4;
+        
         String mensaje;
+        String mensajeMayuscula;
+        
         System.out.println("Ingrese el primer parametro");
         nota1 = entrada.nextDouble();
         System.out.println("Ingrese el segundo parametro");
@@ -34,8 +38,10 @@ public class Problema3 {
 
         mensaje = obtenerPromedio(nota1, nota2, nota3, nota4);
 
-        System.out.printf("El promedio de las notas: %.2f, %.2f, %.2f, %.2f es %s\n",
+        String mensaje2= String.format("El promedio de las notas: %.2f, %.2f, %.2f, %.2f es %s\n",
                 nota1, nota2, nota3, nota4, mensaje);
+        mensajeMayuscula = obtenerMayuscula(mensaje2);
+        System.out.println(mensajeMayuscula);
 
     }
 
@@ -61,5 +67,9 @@ public class Problema3 {
             }
         }
         return promedioCualitativo;
+    }
+    public static String obtenerMayuscula(String m){
+        String m2 = m.toUpperCase();
+        return m2;
     }
 }
