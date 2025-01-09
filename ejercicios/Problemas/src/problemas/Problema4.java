@@ -34,7 +34,7 @@ public class Problema4 {
              if (opcion.equals("1")){
                  obtenerPlanilla(nombre, cedula);
              } else{
-                 //obtenerPredio();
+                 obtenerPredio(nombre, cedula);
              }
              System.out.println("¿Desea terminar? Escriba 3");
              opcion = entrada.nextLine();
@@ -64,7 +64,21 @@ public class Problema4 {
         
         System.out.printf("Clienta %s con cedula %s debe cancelar el valor de $%.2f", n, c, totalMes);
         
+    }
+    public static void obtenerPredio(String n, String c){
+        Scanner entrada = new Scanner(System.in);
+        double valorInmueble;
+        double totalPredio;
         
+        System.out.println("Ingrese el valor del Inmueble");
+        valorInmueble = entrada.nextDouble();
+        
+        totalPredio = (valorInmueble * 2) / 100;
+        
+     
+        
+        System.out.printf("Clienta %s con cedula %s tiene un bien inmueble valorado en $%.1f y "
+                + "tiene que pagar de predio $%.1f ", n, c, valorInmueble, totalPredio);
         
     }
     
