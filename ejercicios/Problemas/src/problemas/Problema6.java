@@ -20,8 +20,8 @@ public class Problema6 {
         media = obtenerMedia(informacion);
         desviacion = obtenerDesviacionEstandar(informacion, media);
 
-        System.out.printf("Media aritmetica: %.2f\n", media);
-        System.out.printf("Desviacion Estandar: %.2f\n", desviacion);
+        System.out.printf("La media aritmetica es de: %.2f\n", media);
+        System.out.printf("La Desviacion Estandar es de: %.2f\n", desviacion);
 
     }
 
